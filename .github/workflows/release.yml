@@ -24,7 +24,7 @@ jobs:
 
       - name: Publish Helm chart
         uses: superbrothers/helm-gh-pages@chart_dir
-        env:
+        with:
           token: ${{ secrets.GITHUB_TOKEN }}
           chart_dir: charts/${{steps.info.outputs.name}}
           chart_version: ${{steps.info.outputs.version}}
